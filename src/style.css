@@ -79,7 +79,8 @@
   width: 100%;
   height: 82vh;
   box-sizing: border-box;
-  background-image: url("../src/media/background_img.jpg");
+  background: url("../src/media/background_img.jpg");
+  background-size: 100%;
 }
 
 .chatabox-message-canvas {
