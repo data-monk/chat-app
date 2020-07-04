@@ -80,10 +80,6 @@
   height: 82vh;
   box-sizing: border-box;
   background-image: url("../src/media/background_img2.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .chatabox-message-canvas {
