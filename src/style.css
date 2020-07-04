@@ -1,0 +1,171 @@
+/* Common display css */
+.container {
+  display: flex;
+  align-items: center;
+}
+/* Topbar */
+
+.topbar {
+  width: 100%;
+  height: 8vh;
+  background-color: #222f3e;
+  /* position: fixed; */
+  vertical-align: middle;
+}
+.topbar .logo {
+  width: 20%;
+  height: 98%;
+  padding: 1%;
+  box-sizing: border-box;
+
+  justify-content: center;
+}
+.topbar .logo-text {
+  width: 40%;
+  height: 98%;
+  padding: 1%;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.topbar .logo,
+.topbar .logo-text {
+  display: flex;
+  align-items: center;
+}
+.topbar .logo .logo-img {
+  margin: 0 auto;
+}
+/* Topbar END */
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: #222f3e;
+  /* position: fixed; */
+  vertical-align: middle;
+}
+
+.navbar .nav-link-bar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.navbar .nav-link-bar .nav-link-tab {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  justify-content: center;
+  text-decoration: none;
+}
+.navbar .nav-link-bar .nav-link-tab.active {
+  background-color: #eebb25;
+  color: black;
+}
+
+/* Navbar End */
+
+/* Chatbox */
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 82vh;
+  box-sizing: border-box;
+  background-image: url(./background_img.jpg);
+}
+
+.chatabox-message-canvas {
+  flex: 8.5;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.chatbox-control {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.chatbox-control .chatbox-control-input {
+  width: 75%;
+  border: 1px solid;
+  border-color: #eebb25;
+}
+.chatbox-control .chatbox-control-send {
+  width: 8.2vh;
+}
+/*  Chatbox end */
+
+/* sendButton */
+.sendButton button:hover,
+.sendButton button {
+  background-color: #eebb25;
+  border-radius: 50%;
+}
+.sendButton button.MuiIconButton-root {
+  color: black;
+}
+/* sendButton end */
+/* textbox */
+.textbox form {
+  display: flex;
+  justify-content: space-around;
+}
+.textbox .textbox-paper .textbox-inputbase{
+width: 75%;
+}
+
+/* .textbox .textbox-paper .textbox-input-camera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+} */
+.textbox .textbox-paper .textbox-input-file input{ 
+display: none;
+z-index: 10;
+    }
+    
+.textbox .textbox-paper .textbox-input-file label{
+z-index: 9;
+}
+
+/* textbox end */
+
+/* messageBox */
+.messageBox {
+  font-size: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  height: auto;
+  position: relative;
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 16px;
+  max-width: 75%;
+  overflow-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.right-message .messageBox {
+  background-color: #f9eab5;
+  border: 1px solid #f9eab5;
+  float: right;
+}
+
+.left-message .messageBox {
+  background-color: #f0f3f6;
+  border: 1px solid #f0f3f6;
+  float: left;
+}
+/* messageBox end */
