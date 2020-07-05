@@ -6,25 +6,23 @@ export default class ChatBox extends Component {
   state = {
     messageInTextBox: "",
     botMessage: "",
-    messageList: [],
-    textboxValue: "",
+    messageList: []
   };
   onTextBoxValueChange = (e) => {
     this.setState({
       messageInTextBox: e.target.value,
-      textboxValue: e.target.value,
     });
   };
   onPressEnterInTextBox = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       this.processMessage(e.target.value);
-      this.setState({ textboxValue: "" });
+      this.setState({ messageInTextBox: "" });
     }
   };
   onSendButtonClick = () => {
     this.processMessage(this.state.messageInTextBox);
-    this.setState({ textboxValue: "" });
+    this.setState({ messageInTextBox: "" });
   };
   addMessage = (source) => {
     let messageList = this.state.messageList;
@@ -90,7 +88,7 @@ export default class ChatBox extends Component {
         <div className="chatbox-control">
           <div className="chatbox-control-input">
             <TextBox
-              value={this.state.textboxValue}
+              value={this.state.messageInTextBox}
               onKeyPress={this.onPressEnterInTextBox}
               onChange={this.onTextBoxValueChange}
             ></TextBox>
